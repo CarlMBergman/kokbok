@@ -1,10 +1,20 @@
 import './App.css'
 
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import StartPage from './views/StartPage'
+
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <StartPage/>
+    },
+  ])
 
   return (
     <div className="App">
-      <h1>hej</h1>
+      <RouterProvider router={ router }/>
     </div>
   )
 }
