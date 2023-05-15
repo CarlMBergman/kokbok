@@ -1,0 +1,70 @@
+.nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.start {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.start__idea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.start__heading {
+    text-align: center;
+    margin: 1rem;
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.start__btn {
+    font-family: 'Cairo';
+    font-weight: 500;
+    font-size: 20px;
+    width: 178px;
+    height: 48px;
+    background: #FAD6A5;
+    border-radius: 5px;
+    border: none;
+}
+
+.start__meal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.start__img {
+    width: 300px;
+    margin: 1rem;
+}
+
+.start__meal--heading {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.start__ratelike {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+}

@@ -1,8 +1,13 @@
+import { useSelector } from "react-redux"
+
 
 function NavBtn() {
+    function handleClick() {
+        console.log('hej');
+    }
 
     return (
-        <button>
+        <button onClick={ handleClick }>
             hamburgarmeny
         </button>
     )

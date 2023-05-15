@@ -45,7 +45,7 @@ const initialState = {
                     step: 'Blanda ner osten i grytan och smaka av med salt. Servera med ris'
                 }
             ],
-            // imgPath: './assets/palak_paneer.jpg',
+            imgPath: '/src/components/img/palak_paneer.jpg',
             rating: 7
         },
         {
@@ -67,18 +67,43 @@ const initialState = {
                     step: 'Ta ut ur påsen och servera. Smaklig måltid!'
                 }
             ],
-            // imgPath: './assets/palak_paneer.jpg',
+            imgPath: '/src/components/img/billys.jpg',
             rating: 9
 
         }
     ],
-    userRecipes: []
+    userRecipes: [
+        {
+            name: 'Billys panpizza',
+            ingredients: [
+                '4 st billyspanpizza'
+            ],
+            cooking: [
+                {
+                    stepNr: 1,
+                    step: 'Klipp ett hål i ena kanten av varje billys påse'
+                },
+                {
+                    stepNr: 2,
+                    step: 'Sätt in i micron på full effekt i 3 minuter och 30 sekunder'
+                },
+                {
+                    stepNr: 3,
+                    step: 'Ta ut ur påsen och servera. Smaklig måltid!'
+                }
+            ],
+            imgPath: '/src/components/img/billys.jpg',
+            rating: 9
+
+        }
+    ]
 }
 
 const reducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'addToUserRecipes':
+            console.log('denna kör');
             return {
                 ...state,
                 userRecipes: state.userRecipes.concat([action.payload])
@@ -86,15 +111,17 @@ const reducer = (state = initialState, action) => {
         case 'removeFromUserRecipes':
             return {
                 ...state,
-                userRecipes: state.userRecipes.map((recipe) => {
-                    if (recipe.name != action.payload.name) {
-                        return recipe
+                userRecipes: state.userRecipes.filter((recipe) => {
+                    if (recipe.name === action.payload.name) {
+                        console.log('tog bort receptet ifrån favoriter');
                     }
                     else {
-                        console.log('tog bort receptet ifrån favoriter');
+                        return recipe
                     }
                 })
             }
+            default:
+                return state
     }
 }
 
