@@ -7,7 +7,6 @@ function Liked() {
 
     function showLikedRecipes() {
         setShowLiked(current => !current)
-        console.log(showLiked);
     }
 
     return (

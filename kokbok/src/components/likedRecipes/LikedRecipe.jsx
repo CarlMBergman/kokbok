@@ -11,7 +11,7 @@ function LikedRecipe(props) {
     }
 
     return (
-        <div onClick={ handleClick }>
+        <div className='liked__drop-recipe' onClick={ handleClick }>
             <h3>{ props.name }</h3>
             <Rating rating={ props.rating }/>
         </div>

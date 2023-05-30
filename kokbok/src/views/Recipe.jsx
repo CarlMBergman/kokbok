@@ -39,8 +39,8 @@ function Recipe() {
             <img className='recipe__img' src={ navigationState.state.recipe.imgPath } alt="" />
             <section className='recipe__box'>
                 <div>
-                    <button className='recipe__btn' onClick={ toggleInst }>Ingredienser</button>
-                    <button className='recipe__btn' onClick={ toggleIng }>Instruktioner</button>
+                    <button className={`recipe__btn recipe__btn-${showInst}`} onClick={ toggleInst }>Ingredienser</button>
+                    <button className={`recipe__btn recipe__btn-${showIng}`} onClick={ toggleIng }>Instruktioner</button>
                 </div>
                     {showInst && (
                         <div className='recipe__recipe'>
@@ -54,7 +54,6 @@ function Recipe() {
                         </div>
                     )}
             </section>
-            
         </article>
     )
 }

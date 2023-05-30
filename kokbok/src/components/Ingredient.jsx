@@ -1,9 +1,11 @@
-
+import './Ingredient.css'
 
 function Ingredient(props) {
 
     return (
-        <p>{props.ingredient}</p>
+        <aside className='ingredient'>
+            <p className='ingredient__text'>{props.ingredient}</p>
+        </aside>
     )
 }
 

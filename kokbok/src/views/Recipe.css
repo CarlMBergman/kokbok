@@ -35,15 +35,20 @@
 
 .recipe__box {
     width: 90%;
-    border-radius: 2rem;
+    border-radius: 1rem;
     background-color: #FAD6A5;
+    margin-bottom: 4rem;
 }
 
 .recipe__btn {
     width: 50%;
     height: 2rem;
     border: none;
-    background-color: transparent;
+    background-color: #FAD6A5;
+}
+
+.recipe__btn-false {
+    background-color: #CBAC81;
 }
 
 .recipe__recipe {

@@ -8,20 +8,21 @@ function LikeBtn(props) {
     const userRecipes = useSelector((state) => { return state.userRecipes })
     const [like, setLike] = useState('/src/components/img/not-liked.svg');
 
-    function checkLiked() {
-        userRecipes.forEach(recipe => {
-            if (props.currentRecipe.name === recipe.name) {
-                setLike('/src/components/img/liked.svg')
-                console.log('den är gillad');
-            }else {
-                setLike('/src/components/img/not-liked.svg')
-            }
-            console.log('inte gillad');
-        });
-    }
+    
     useEffect(() => {
+        function checkLiked() {
+            userRecipes.forEach(recipe => {
+                if (props.currentRecipe.name === recipe.name) {
+                    setLike('/src/components/img/liked.svg')
+                    console.log('den är gillad');
+                }else {
+                    setLike('/src/components/img/not-liked.svg')
+                }
+                console.log('inte gillad');
+            });
+        }
         checkLiked();
-    }, [])
+        })
 
     function onClick() {
         if (like === '/src/components/img/not-liked.svg') {
@@ -34,7 +35,7 @@ function LikeBtn(props) {
     }
 
     return (
-        <img src={ like } alt="" onClick={ onClick }/>
+        <img src={ like } alt="liked" onClick={ onClick }/>
     )
 }
 

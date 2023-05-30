@@ -1,15 +1,15 @@
 import './startPage.css'
 import NavBtn from "../components/navBtn"
 import Liked from "../components/likedRecipes/Liked"
-import Rating from '../components/likedRecipes/Rating'
 import { useState } from "react"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import LikeBtn from '../components/LikeBtn'
+import MPRecipe from '../components/mPRecipe'
 
 
 function StartPage() {
     const recipes = useSelector((state) => { return state.recipes })
+    const userRecipes = useSelector((state) => { return state.userRecipes })
     const navigate = useNavigate()
     const [btnText, setBtnText] = useState('Ge mig tips!')
     const [currentRecipe, setCurrentRecipe] = useState({})
@@ -23,11 +23,6 @@ function StartPage() {
         setBtnText('Ge mig ett nytt tips!')
     }
 
-    function toRecipe() {
-        navigate('/recipe', { state: { recipe: currentRecipe }})
-    }
-
-
     return (
         <section className='start'>
             <nav className="nav">
@@ -39,17 +34,8 @@ function StartPage() {
                 <button className='start__btn' onClick={ newRecipe }>{ btnText }</button>
             </section>
             {show && (
-                <section className='start__meal'>
-                    <h2 className='start__meal--heading'>{ currentRecipe.name }</h2>
-                    <img className='start__img' src={ currentRecipe.imgPath } alt="Här ska bild på maten ligga" />
-                    <div className='start__ratelike'>
-                        <Rating rating={ currentRecipe.rating }/>
-                        <LikeBtn currentRecipe={ currentRecipe }/>
-                    </div>
-                    <button className='start__btn' onClick={ toRecipe }>Till receptet!</button>
-                </section>
-            )}
-            
+                <MPRecipe currentRecipe={ currentRecipe }/>
+            )}   
         </section>
        
     )

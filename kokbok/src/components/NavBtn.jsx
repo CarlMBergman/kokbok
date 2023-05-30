@@ -1,3 +1,5 @@
+import './NavBtn.css'
+import navburger from './img/navburger.svg';
 import { useSelector } from "react-redux"
 
 
@@ -7,9 +9,7 @@ function NavBtn() {
     }
 
     return (
-        <button onClick={ handleClick }>
-            hamburgarmeny
-        </button>
+        <img src={ navburger } className='nav__btn' onClick={ handleClick } alt="navigation" />
     )
 }
 
