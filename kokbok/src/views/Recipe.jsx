@@ -5,6 +5,7 @@ import { useState } from "react";
 import Instruction from "../components/instruction";
 import Ingredient  from "../components/Ingredient";
 import Liked       from '../components/likedRecipes/Liked';
+import NavBtn from '../components/NavBtn';
 
 function Recipe() {
     const navigate = useNavigate();
@@ -31,10 +32,10 @@ function Recipe() {
 
     return (
         <article className="recipe">
-            <header className='recipe__heading'>
-                <button className='recipe__heading--btn' onClick={ () => navigate('/') }>Go back</button>
+            <nav className="nav">
+                <NavBtn/>
                 <Liked/>
-            </header>
+            </nav>
             <h1 className='recipe__heading--text'>{ navigationState.state.recipe.name }</h1>
             <img className='recipe__img' src={ navigationState.state.recipe.imgPath } alt="" />
             <section className='recipe__box'>

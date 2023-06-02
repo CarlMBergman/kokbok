@@ -1,15 +1,24 @@
 import './NavBtn.css'
 import navburger from './img/navburger.svg';
-import { useSelector } from "react-redux"
+import { useState } from 'react';
+import Slider from './Slider';
 
 
 function NavBtn() {
+    const [showNav, setShowNav] = useState(false)
+
     function handleClick() {
-        console.log('hej');
+        setShowNav(current => !current)
     }
 
     return (
-        <img src={ navburger } className='nav__btn' onClick={ handleClick } alt="navigation" />
+        <div className='nav__btn'>
+            <img src={ navburger } onClick={ handleClick } alt="navigation" />
+            {showNav && (
+                <Slider setShowNav={ setShowNav }/>
+            )}
+        </div>
+        
     )
 }
 

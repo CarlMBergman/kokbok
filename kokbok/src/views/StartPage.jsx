@@ -1,5 +1,5 @@
 import './startPage.css'
-import NavBtn from "../components/navBtn"
+import NavBtn from "../components/NavBtn"
 import Liked from "../components/likedRecipes/Liked"
 import { useState } from "react"
 import { useSelector } from "react-redux"
