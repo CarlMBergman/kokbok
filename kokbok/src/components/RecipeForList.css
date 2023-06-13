@@ -1,3 +1,16 @@
+.recipelist {
+    margin: 2rem;
+    background-color: #FAD6A5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .recipelist__img {
-    width: 50px;
+    width: 150px;
+}
+
+.recipelist__info {
+    width: 60%;
+    margin: .5rem;
 }

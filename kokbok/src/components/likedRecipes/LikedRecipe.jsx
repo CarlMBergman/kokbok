@@ -2,6 +2,7 @@ import './LikedRecipe.css'
 import { useNavigate } from 'react-router-dom'
 
 import Rating from './Rating';
+import LikeBtn from '../LikeBtn';
 
 function LikedRecipe(props) {
     const navigate = useNavigate();
@@ -11,9 +12,12 @@ function LikedRecipe(props) {
     }
 
     return (
-        <div className='liked__drop-recipe' onClick={ handleClick }>
-            <h3>{ props.name }</h3>
-            <Rating rating={ props.rating }/>
+        <div className='liked__drop-recipe'>
+            <div  onClick={ handleClick }>
+                <h3>{ props.name }</h3>
+                <Rating rating={ props.rating }/>    
+            </div>
+            <LikeBtn currentRecipe={ props.recipe }/>
         </div>
     )
 }
