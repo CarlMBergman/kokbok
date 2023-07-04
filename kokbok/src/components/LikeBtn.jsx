@@ -14,11 +14,9 @@ function LikeBtn(props) {
             userRecipes.forEach(recipe => {
                 if (props.currentRecipe.name === recipe.name) {
                     setLike('/src/components/img/liked.svg')
-                    console.log('den är gillad');
                 }else {
                     setLike('/src/components/img/not-liked.svg')
                 }
-                console.log('inte gillad');
             });
         }
         checkLiked();

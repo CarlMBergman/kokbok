@@ -3,21 +3,81 @@ const initialState = {
         {
             name: 'Palak paneer med halloumi',
             ingredients: [
-                '4 port ris',
-                '1 schalottenlök',
-                '1 vitlöksklyfta', 
-                '3/4 tomatask', 
-                'riktligt med olivolja', 
-                '2 msk riven ingefära', 
-                '2 msk tomatpuré', 
-                '1 msk garam masala', 
-                '390 g krossade tomater', 
-                '1 dl vatten', 
-                '2,5 dl vispgrädde', 
-                '1 grönsaksbuljongtärning', 
-                '150 g spenat', 
-                '400 g grilloumi', 
-                'salt till avsmakning'
+                {
+                    amount: 2,
+                    measurement: 'port',
+                    ingredient: 'ris'
+                },
+                {
+                    amount: 0.5,
+                    measurement: '',
+                    ingredient: 'charlottenlök'
+                },
+                {
+                    amount: 0.5,
+                    measurement: '',
+                    ingredient: 'vitlöksklyfta'
+                },
+                {
+                    amount: 0.5,
+                    measurement: '',
+                    ingredient: 'tomatask'
+                },
+                {
+                    amount: 0,
+                    measurement: '',
+                    ingredient: 'Riktligt med olivolja'
+                },
+                {
+                    amount: 1,
+                    measurement: 'msk',
+                    ingredient: 'Riven ingefära'
+                },
+                {
+                    amount: 1,
+                    measurement: 'msk',
+                    ingredient: 'Tomatpuré'
+                },
+                {
+                    amount: 0.5,
+                    measurement: 'msk',
+                    ingredient: 'Garam masala'
+                },
+                {
+                    amount: 195,
+                    measurement: 'g',
+                    ingredient: 'krossade tomater'
+                },
+                {
+                    amount: 0.5,
+                    measurement: 'dl',
+                    ingredient: 'Vatten'
+                },
+                {
+                    amount: 1.25,
+                    measurement: 'dl',
+                    ingredient: 'Vispgrädde'
+                },
+                {
+                    amount: 0.5,
+                    measurement: '',
+                    ingredient: 'grönsaksbuljongtärning'
+                },
+                {
+                    amount: 75,
+                    measurement: 'g',
+                    ingredient: 'Spenat'
+                },
+                {
+                    amount: 200,
+                    measurement: 'g',
+                    ingredient: 'Grilloumi'
+                },
+                {
+                    amount: 0,
+                    measurement: '',
+                    ingredient: 'salt till avsmakning'
+                },
             ],
             cooking: [
                 {
@@ -51,7 +111,12 @@ const initialState = {
         {
             name: 'Billys panpizza',
             ingredients: [
-                '4 st billyspanpizza'
+                {
+                    amount: 2,
+                    measurement: 'st',
+                    ingredient: 'Billys Panpizza'
+                }
+                
             ],
             cooking: [
                 {
@@ -76,7 +141,12 @@ const initialState = {
         {
             name: 'Billys panpizza',
             ingredients: [
-                '4 st billyspanpizza'
+                {
+                    amount: 2,
+                    measurement: 'st',
+                    ingredient: 'Billys Panpizza'
+                }
+                
             ],
             cooking: [
                 {
@@ -94,7 +164,6 @@ const initialState = {
             ],
             imgPath: '/src/components/img/billys.jpg',
             rating: 9
-
         }
     ]
 }
@@ -103,7 +172,7 @@ const reducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'addToUserRecipes':
-            console.log('denna kör');
+            console.log('Lägger till recept i gillade');
             return {
                 ...state,
                 userRecipes: state.userRecipes.concat([action.payload])
