@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import StartPage from './views/StartPage'
 import Recipe from './views/Recipe'
 import AllRecipes from './views/AllRecipes'
+import FindRecipe from './views/FindRecipe'
 
 function App() {
 
@@ -19,6 +20,10 @@ function App() {
     {
       path: '/allrecipes',
       element: <AllRecipes/>
+    },
+    {
+      path: '/findrecipe',
+      element: <FindRecipe/>
     }
   ])
 

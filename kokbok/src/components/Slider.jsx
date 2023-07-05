@@ -16,6 +16,7 @@ function Slider(props) {
             <button className='slider__btn' onClick={ () => navigate('/') }>HEM</button>
             <button className='slider__btn' onClick={ () => navigate('/allrecipes') }>ALLA RECEPT</button>
             <button className='slider__btn' onClick={ () => navigate('/') }>DINA GILLADE</button>
+            <button className='slider__btn' onClick={ () => navigate('/findrecipe') }>HITTA RECEPT</button>
         </aside>
     )
 }
