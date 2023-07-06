@@ -2,11 +2,14 @@ import './FilterFunction.css'
 import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react';
 
+import RecipeForList from './RecipeForList';
 
 function FilterFunction() {
 
     const [checked, setChecked] = useState([]);
-    let cookableRecipe = []
+    const [show, toggleShow] = useState(true)
+    let cookableRecipe = [];
+    let recipesToShow = [];
     const allRecipes = useSelector((state) => { return state.recipes })
     // const [lengthCount, setLengthCount] = useState(0)
     let allIngredients = [];
@@ -38,21 +41,39 @@ function FilterFunction() {
         setChecked(checkedCopy)
     }
 
+    let matchingIngredients = 0;
+
     function handleClick() {
+        cookableRecipe = [];
+        recipesToShow = [];
         allRecipes.forEach((recipe) => {
             checked.forEach((checkedR) => {
                 recipe.ingredients.forEach((ingredient) => {
-                    if (checkedR != ingredient.ingredient ) {
-                        console.log('matchade inte');
-                    }
-                    else {
-                        cookableRecipe = [...cookableRecipe, recipe]
+                    if (checkedR == ingredient.ingredient ) {
+                        matchingIngredients++
+                        console.log(recipe.ingredients.length);
+                        console.log(matchingIngredients);
+                        if (matchingIngredients == recipe.ingredients.length){
+                            console.log('lägger till recept');
+                            cookableRecipe = [...cookableRecipe, recipe]
+                            matchingIngredients = 0;
+                        }
                     }
                 })
             })
         })
         console.log(cookableRecipe);
+        toggleShow(true)
     }
+    recipesToShow = cookableRecipe.map((recipe) => {
+        return <RecipeForList 
+        recipe={ recipe }
+        rating={ recipe.rating }
+        imgPath={ recipe.imgPath } 
+        name={ recipe.name }
+        key={ recipe.name } />
+    })
+    console.log(recipesToShow);
 
     return (
         <section>
@@ -60,7 +81,7 @@ function FilterFunction() {
                 {ingredientComp}
             </article>
             <button onClick={ handleClick } className='start__btn filter__btn'>HITTA RECEPT</button>
-            {/* <aside>{ cookableRecipe.name }</aside> */}
+            {show && ([recipesToShow])}
         </section>
     )
 }
