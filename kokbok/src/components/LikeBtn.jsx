@@ -7,20 +7,20 @@ function LikeBtn(props) {
     const dispatch = useDispatch()
     const userRecipes = useSelector((state) => { return state.userRecipes })
     const [like, setLike] = useState('/src/components/img/not-liked.svg');
+    const index = userRecipes.indexOf(props.currentRecipe)
 
-    
+
     useEffect(() => {
         function checkLiked() {
-            userRecipes.forEach(recipe => {
-                if (props.currentRecipe.name === recipe.name) {
-                    setLike('/src/components/img/liked.svg')
-                }else {
-                    setLike('/src/components/img/not-liked.svg')
-                }
-            });
+            if (index == -1) {
+                setLike('/src/components/img/not-liked.svg')
+            }
+            else {
+                setLike('/src/components/img/liked.svg')
+            }
         }
-        checkLiked();
-        })
+        checkLiked()
+    })
 
     function onClick() {
         if (like === '/src/components/img/not-liked.svg') {
