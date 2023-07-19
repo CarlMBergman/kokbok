@@ -26,7 +26,8 @@ function LikeBtn(props) {
         if (like === '/src/components/img/not-liked.svg') {
             setLike('/src/components/img/liked.svg')
             dispatch(addRecipe(props.currentRecipe))
-        } else {
+        } 
+        else {
             setLike('/src/components/img/not-liked.svg')
             dispatch(removeRecipe(props.currentRecipe))
         }

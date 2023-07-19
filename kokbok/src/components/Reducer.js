@@ -6,22 +6,22 @@ const initialState = {
                 {
                     amount: 2,
                     measurement: 'port',
-                    ingredient: 'ris'
+                    ingredient: 'Ris'
                 },
                 {
                     amount: 0.5,
                     measurement: '',
-                    ingredient: 'charlottenlök'
+                    ingredient: 'Charlottenlök'
                 },
                 {
                     amount: 0.5,
                     measurement: '',
-                    ingredient: 'vitlöksklyfta'
+                    ingredient: 'Vitlöksklyfta'
                 },
                 {
                     amount: 0.5,
                     measurement: '',
-                    ingredient: 'tomatask'
+                    ingredient: 'Tomatask'
                 },
                 {
                     amount: 0,
@@ -46,7 +46,7 @@ const initialState = {
                 {
                     amount: 195,
                     measurement: 'g',
-                    ingredient: 'krossade tomater'
+                    ingredient: 'Krossade tomater'
                 },
                 {
                     amount: 0.5,
@@ -61,7 +61,7 @@ const initialState = {
                 {
                     amount: 0.5,
                     measurement: '',
-                    ingredient: 'grönsaksbuljongtärning'
+                    ingredient: 'Grönsaksbuljongtärning'
                 },
                 {
                     amount: 75,
@@ -76,7 +76,7 @@ const initialState = {
                 {
                     amount: 0,
                     measurement: '',
-                    ingredient: 'salt till avsmakning'
+                    ingredient: 'Salt'
                 },
             ],
             cooking: [

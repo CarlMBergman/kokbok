@@ -7,9 +7,9 @@ import RecipeForList from './RecipeForList';
 function FilterFunction() {
 
     const [checked, setChecked] = useState([]);
-    const [show, toggleShow] = useState(true)
+    const [show, toggleShow] = useState(false)
     let cookableRecipe = [];
-    let recipesToShow = [];
+    const [recipesToShow, setRecipesToShow] = useState([]);
     const allRecipes = useSelector((state) => { return state.recipes })
     // const [lengthCount, setLengthCount] = useState(0)
     let allIngredients = [];
@@ -45,7 +45,7 @@ function FilterFunction() {
 
     function handleClick() {
         cookableRecipe = [];
-        recipesToShow = [];
+        setRecipesToShow([])
         allRecipes.forEach((recipe) => {
             checked.forEach((checkedR) => {
                 recipe.ingredients.forEach((ingredient) => {
@@ -63,17 +63,21 @@ function FilterFunction() {
             })
         })
         console.log(cookableRecipe);
+        setRecipesToShow(cookableRecipe.map((recipe) => {
+            return <RecipeForList 
+            recipe={ recipe }
+            rating={ recipe.rating }
+            imgPath={ recipe.imgPath } 
+            name={ recipe.name }
+            key={ recipe.name } />
+        }))
         toggleShow(true)
+        
+        console.log(recipesToShow);
     }
-    recipesToShow = cookableRecipe.map((recipe) => {
-        return <RecipeForList 
-        recipe={ recipe }
-        rating={ recipe.rating }
-        imgPath={ recipe.imgPath } 
-        name={ recipe.name }
-        key={ recipe.name } />
-    })
-    console.log(recipesToShow);
+    
+   
+    
 
     return (
         <section>
@@ -82,6 +86,7 @@ function FilterFunction() {
             </article>
             <button onClick={ handleClick } className='start__btn filter__btn'>HITTA RECEPT</button>
             {show && ([recipesToShow])}
+            {/* {recipesToShow} */}
         </section>
     )
 }
