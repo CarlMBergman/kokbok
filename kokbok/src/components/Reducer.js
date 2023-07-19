@@ -15,13 +15,13 @@ const initialState = {
                 },
                 {
                     amount: 0.5,
-                    measurement: '',
-                    ingredient: 'Vitlöksklyfta'
+                    measurement: 'klyfta',
+                    ingredient: 'Vitlök'
                 },
                 {
                     amount: 0.5,
-                    measurement: '',
-                    ingredient: 'Tomatask'
+                    measurement: 'ask',
+                    ingredient: 'Tomat'
                 },
                 {
                     amount: 0,
@@ -30,8 +30,8 @@ const initialState = {
                 },
                 {
                     amount: 1,
-                    measurement: 'msk',
-                    ingredient: 'Riven ingefära'
+                    measurement: 'msk riven',
+                    ingredient: 'Ingefära'
                 },
                 {
                     amount: 1,

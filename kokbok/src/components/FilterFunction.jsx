@@ -16,7 +16,16 @@ function FilterFunction() {
 
     allRecipes.map((recipe) => {
         recipe.ingredients.map((ingredient) => {
-            allIngredients.push(ingredient.ingredient)
+            const index = allIngredients.findIndex(ingredientSaved => ingredientSaved === ingredient.ingredient)
+            if (allIngredients.length === 0) {
+                allIngredients.push(ingredient.ingredient)
+            }
+            else if (index === -1) {
+                allIngredients.push(ingredient.ingredient)
+            }
+            else {
+    
+            }
         })
     })
 
@@ -82,7 +91,6 @@ function FilterFunction() {
             </article>
             <button onClick={ handleClick } className='start__btn filter__btn'>HITTA RECEPT</button>
             {show && ([recipesToShow])}
-            {/* {recipesToShow} */}
         </section>
     )
 }
