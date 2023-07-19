@@ -7,8 +7,7 @@ function LikeBtn(props) {
     const dispatch = useDispatch()
     const userRecipes = useSelector((state) => { return state.userRecipes })
     const [like, setLike] = useState('/src/components/img/not-liked.svg');
-    const index = userRecipes.indexOf(props.currentRecipe)
-
+    const index = userRecipes.findIndex(userRecipes => userRecipes.name === props.currentRecipe.name)
 
     useEffect(() => {
         function checkLiked() {

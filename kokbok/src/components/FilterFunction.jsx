@@ -23,8 +23,8 @@ function FilterFunction() {
     const ingredientComp = allIngredients.map((ingredient) => {
         return (
             <div className='filter__ingredient' key={ ingredient }>
-                <input className='filter__ingredient-check' onChange={ handleChange } type="checkbox" value={ ingredient }/>
-                <p>{ ingredient }</p>
+                <input className='filter__ingredient-check' onChange={ handleChange } type="checkbox" id={ ingredient } value={ ingredient }/>
+                <label htmlFor={ ingredient }>{ ingredient }</label>
             </div>
         )
     })
@@ -41,28 +41,26 @@ function FilterFunction() {
         setChecked(checkedCopy)
     }
 
-    let matchingIngredients = 0;
+    
 
     function handleClick() {
         cookableRecipe = [];
         setRecipesToShow([])
         allRecipes.forEach((recipe) => {
+            let matchingIngredients = 0;
             checked.forEach((checkedR) => {
                 recipe.ingredients.forEach((ingredient) => {
                     if (checkedR == ingredient.ingredient ) {
                         matchingIngredients++
-                        console.log(recipe.ingredients.length);
-                        console.log(matchingIngredients);
                         if (matchingIngredients == recipe.ingredients.length){
                             console.log('lägger till recept');
                             cookableRecipe = [...cookableRecipe, recipe]
-                            matchingIngredients = 0;
                         }
                     }
                 })
             })
         })
-        console.log(cookableRecipe);
+
         setRecipesToShow(cookableRecipe.map((recipe) => {
             return <RecipeForList 
             recipe={ recipe }
@@ -72,8 +70,6 @@ function FilterFunction() {
             key={ recipe.name } />
         }))
         toggleShow(true)
-        
-        console.log(recipesToShow);
     }
     
    

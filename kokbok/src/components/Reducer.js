@@ -164,6 +164,7 @@ const initialState = {
             ],
             imgPath: '/src/components/img/billys.jpg',
             rating: 9
+
         }
     ]
 }
