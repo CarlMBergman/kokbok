@@ -1,6 +1,7 @@
 .filter {
     display: flex;
     flex-wrap: wrap;
+    margin: 2rem;
 }
 
 .filter__ingredient {
@@ -12,4 +13,6 @@
 
 .filter__btn {
     align-self: center;
+    margin: 2rem;
+    margin-top: 0;
 }

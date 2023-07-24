@@ -11,10 +11,10 @@ function RecipeForList(props) {
         <article className='recipelist'>
             <img className='recipelist__img' src={ props.imgPath } alt="img" />
             <div className='recipelist__info'>
-                <h2>{ props.name }</h2>
+                <h2 className='recipelist__header'>{ props.name }</h2>
                 <Rating rating={ props.rating }/>
                 <LikeBtn currentRecipe={ props.recipe }/>
-                <button onClick={ () => navigate('/recipe', { state: { recipe: props.recipe }})}>Till receptet!</button>
+                <button className='recipelist__btn' onClick={ () => navigate('/recipe', { state: { recipe: props.recipe }})}>Till receptet!</button>
             </div>
         </article>
     )
