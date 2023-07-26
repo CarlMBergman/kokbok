@@ -389,6 +389,112 @@ const initialState = {
             imgPath: '/src/components/img/happyguy.jpg',
             rating: 8
 
+        },
+        {
+            name: 'Köttfärsås o spaghetti',
+            ingredients: [
+                {
+                    amount: 0.25,
+                    measurement: 'st',
+                    ingredient: 'Gullök'
+                },
+                {
+                    amount: 125,
+                    measurement: 'g',
+                    ingredient: 'Köttfärs'
+                },
+                {
+                    amount: 97.75,
+                    measurement: 'g',
+                    ingredient: 'Krossade tomater'
+                },
+                {
+                    amount: .75,
+                    measurement: 'msk',
+                    ingredient: 'Tomatpuré'
+                },
+                {
+                    amount: .25,
+                    measurement: 'msk',
+                    ingredient: 'Balsamvinäger'
+                },
+                {
+                    amount: .25,
+                    measurement: 'msk',
+                    ingredient: 'Grönsaksbuljong'
+                },
+                {
+                    amount: .1,
+                    measurement: 'msk',
+                    ingredient: 'Soja'
+                },
+                {
+                    amount: .5,
+                    measurement: 'msk',
+                    ingredient: 'Olivolja'
+                },
+                {
+                    amount: .1,
+                    measurement: 'tsk',
+                    ingredient: 'Torkad basilika'
+                },
+                {
+                    amount: .1,
+                    measurement: 'tsk',
+                    ingredient: 'Torkad oregano'
+                },
+                {
+                    amount: .25,
+                    measurement: 'krm',
+                    ingredient: 'Salt'
+                },
+                {
+                    amount: .25,
+                    measurement: 'krm',
+                    ingredient: 'Svartpeppar'
+                },
+                {
+                    amount: 1,
+                    measurement: 'klyftor',
+                    ingredient: 'Vitlök'
+                },
+                {
+                    amount: 125,
+                    measurement: 'g',
+                    ingredient: 'Spaghetti'
+                },
+                {
+                    amount: 25,
+                    measurement: 'g',
+                    ingredient: 'Parmesanost'
+                }
+                
+            ],
+            cooking: [
+                {
+                    stepNr: 1,
+                    step: 'Skala och finhacka lök och vitlök. Hetta upp olja i en stekpanna eller gryta. Fräs löken mjuk tillsammans med torkad basilika och oregano.'
+                },
+                {
+                    stepNr: 2,
+                    step: 'Tillsätt färsen och bryn tills den är genomstekt. Tillsätt tomatpuré och balsamvinäger och fräs under omrörning cirka 30 sekunder.'
+                },
+                {
+                    stepNr: 3,
+                    step: 'Tillsätt krossade tomater och lika mycket vatten, buljong, socker och soja. Låt köttfärssåsen puttra cirka 20 minuter. Smaka av köttfärssåsen med salt och peppar.'
+                },
+                {
+                    stepNr: 4,
+                    step: 'Koka pasta enligt anvisning på förpackningen.'
+                },
+                {
+                    stepNr: 5,
+                    step: 'Skölj och finhacka basilika och blanda ner i såsen. Dra några drag med pepparkvarnen och strö över flingsalt.'
+                }
+            ],
+            imgPath: '/src/components/img/kottfars.jpeg',
+            rating: 9
+
         }
     ],
     userRecipes: [
