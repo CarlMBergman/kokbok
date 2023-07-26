@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux";
-import { addRecipe, removeRecipe } from "./action";
+import { addRecipe, removeRecipe, localStorageUpdate } from "./action";
 
 
 function LikeBtn(props) {
@@ -30,6 +30,7 @@ function LikeBtn(props) {
             setLike('/src/components/img/not-liked.svg')
             dispatch(removeRecipe(props.currentRecipe))
         }
+        dispatch(localStorageUpdate())
     }
 
     return (

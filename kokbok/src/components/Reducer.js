@@ -25,8 +25,8 @@ const initialState = {
                 },
                 {
                     amount: 0,
-                    measurement: '',
-                    ingredient: 'Riktligt med olivolja'
+                    measurement: 'Rikligt med',
+                    ingredient: 'Olivolja'
                 },
                 {
                     amount: 1,
@@ -444,8 +444,21 @@ const reducer = (state = initialState, action) => {
                     }
                 })
             }
+            case 'updateLocalStorage':
+                localStorage.setItem('likedRecipes', JSON.stringify(state.userRecipes))
+
             default:
+                const likedFromLocal = JSON.parse(localStorage.getItem('likedRecipes'));
+            if (likedFromLocal) {
+                return {
+                    ...state,
+                    userRecipes: likedFromLocal
+                }
+            }
+            else {
+                localStorage.setItem('likedRecipes', JSON.stringify(state.userRecipes))
                 return state
+            }   
     }
 }
 

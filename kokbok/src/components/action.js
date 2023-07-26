@@ -12,4 +12,10 @@ function removeRecipe(value) {
     }
 }
 
-export { addRecipe, removeRecipe }
+function localStorageUpdate() {
+    return {
+        type: 'updateLocalStorage'
+    }
+}
+
+export { addRecipe, removeRecipe, localStorageUpdate }
