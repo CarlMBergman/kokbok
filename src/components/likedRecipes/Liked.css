@@ -1,0 +1,11 @@
+.liked {
+    display: grid;
+    flex-direction: column;
+    width: 200px;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(2, 45px);
+}
+
+.liked__btn {
+    justify-self: end;
+}

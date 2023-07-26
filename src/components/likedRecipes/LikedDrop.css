@@ -1,0 +1,17 @@
+.liked__drop {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.liked__drop--content {
+    padding: 1rem;
+    background-color: #CBAC81;
+    width: 200px;
+}
+
+.liked__drop--triangle {
+    width: 49px;
+    margin-bottom: -10px;
+}
