@@ -528,7 +528,7 @@ const initialState = {
                     step: 'Ta ut ur påsen och servera. Smaklig måltid!'
                 }
             ],
-            imgPath: '/src/components/img/billys.jpg',
+            imgPath: billys,
             rating: 9
 
         }
