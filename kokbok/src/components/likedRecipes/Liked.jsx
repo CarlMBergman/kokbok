@@ -1,6 +1,7 @@
 import './Liked.css'
 import { useState } from "react";
 import LikedDrop from './LikedDrop';
+import liked from '../img/heartbtn.svg'
 
 function Liked() {
     const [showLiked, setShowLiked] = useState(false);
@@ -11,7 +12,7 @@ function Liked() {
 
     return (
         <aside className='liked'>
-            <img src="/src/components/img/heartbtn.svg" className='liked__btn' onClick={ showLikedRecipes } alt="likedrecipe" />
+            <img src={ liked } className='liked__btn' onClick={ showLikedRecipes } alt="likedrecipe" />
             {showLiked && (
                 <LikedDrop/>
             )}
