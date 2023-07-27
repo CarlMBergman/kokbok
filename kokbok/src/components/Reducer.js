@@ -1,4 +1,8 @@
-import img from '../components/img/eggfella.jpg'
+import kottfars from '../components/img/kottfars.jpeg'
+import eggfella from '../components/img/eggfella.jpg'
+import happyguy from '../components/img/happyguy.jpg'
+import billys from '../components/img/billys.jpg'
+import palak from '../components/img/palak_paneer.jpg'
 
 const initialState = {
     recipes: [
@@ -107,7 +111,7 @@ const initialState = {
                     step: 'Blanda ner osten i grytan och smaka av med salt. Servera med ris'
                 }
             ],
-            imgPath: '/src/components/img/palak_paneer.jpg',
+            imgPath: palak,
             rating: 7
         },
         {
@@ -134,7 +138,7 @@ const initialState = {
                     step: 'Ta ut ur påsen och servera. Smaklig måltid!'
                 }
             ],
-            imgPath: '/src/components/img/billys.jpg',
+            imgPath: billys,
             rating: 9
 
         },
@@ -277,7 +281,7 @@ const initialState = {
                     step: 'Toppa med salladslök'
                 },
             ],
-            imgPath: '/src/components/img/eggfella.jpg',
+            imgPath: happyguy,
             rating: 10
 
         },
@@ -388,7 +392,7 @@ const initialState = {
                     step: 'Toppa riset med hackad Jalapeño, salladslök, jordnötter, gurkan och alternativt lite extra chiliolja för extra sting'
                 }
             ],
-            imgPath: '/src/components/img/happyguy.jpg',
+            imgPath: eggfella,
             rating: 8
 
         },
@@ -494,7 +498,7 @@ const initialState = {
                     step: 'Skölj och finhacka basilika och blanda ner i såsen. Dra några drag med pepparkvarnen och strö över flingsalt.'
                 }
             ],
-            imgPath: img,
+            imgPath: kottfars,
             rating: 9
 
         }

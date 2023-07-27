@@ -12,7 +12,7 @@ function NavBtn() {
     }
 
     return (
-        <div className='nav__btnn'>
+        <div className='nav__btn'>
             <img src={ navburger } onClick={ handleClick } alt="navigation" />
             {showNav && (
                 <Slider setShowNav={ setShowNav }/>
