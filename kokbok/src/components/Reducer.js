@@ -1,3 +1,5 @@
+import img from '../components/img/eggfella.jpg'
+
 const initialState = {
     recipes: [
         {
@@ -492,7 +494,7 @@ const initialState = {
                     step: 'Skölj och finhacka basilika och blanda ner i såsen. Dra några drag med pepparkvarnen och strö över flingsalt.'
                 }
             ],
-            imgPath: '/src/components/img/kottfars.jpeg',
+            imgPath: img,
             rating: 9
 
         }
