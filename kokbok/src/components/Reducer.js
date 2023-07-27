@@ -504,34 +504,6 @@ const initialState = {
         }
     ],
     userRecipes: [
-        {
-            name: 'Billys panpizza',
-            ingredients: [
-                {
-                    amount: 2,
-                    measurement: 'st',
-                    ingredient: 'Billys Panpizza'
-                }
-                
-            ],
-            cooking: [
-                {
-                    stepNr: 1,
-                    step: 'Klipp ett hål i ena kanten av varje billys påse'
-                },
-                {
-                    stepNr: 2,
-                    step: 'Sätt in i micron på full effekt i 3 minuter och 30 sekunder'
-                },
-                {
-                    stepNr: 3,
-                    step: 'Ta ut ur påsen och servera. Smaklig måltid!'
-                }
-            ],
-            imgPath: billys,
-            rating: 9
-
-        }
     ]
 }
 
