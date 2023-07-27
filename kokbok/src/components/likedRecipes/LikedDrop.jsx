@@ -1,6 +1,7 @@
 import './LikedDrop.css'
 import { useSelector } from "react-redux"
 import LikedRecipe from './LikedRecipe'
+import triangle from '../img/triangle-liked.svg'
 
 
 function LikedDrop() {
@@ -12,7 +13,7 @@ function LikedDrop() {
 
     return (
         <div className='liked__drop'>
-            <img src="/src/components/img/triangle-liked.svg" className='liked__drop--triangle' alt="" />
+            <img src={ triangle } className='liked__drop--triangle' alt="" />
             <aside className='liked__drop--content'>
                 { recipes }
             </aside>
