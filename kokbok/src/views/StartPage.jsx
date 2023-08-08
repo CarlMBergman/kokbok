@@ -1,10 +1,9 @@
 import './startPage.css'
-import NavBtn from "../components/NavBtn"
-import Liked from "../components/likedRecipes/Liked"
 import { useState } from "react"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import MPRecipe from '../components/mPRecipe'
+import Nav from '../components/Nav'
 
 
 function StartPage() {
@@ -25,10 +24,7 @@ function StartPage() {
 
     return (
         <section className='start'>
-            <nav className="nav">
-                <NavBtn/>
-                <Liked/>
-            </nav>
+            <Nav />
             <section className='start__idea'>
                 <h1 className='start__heading'>Best of Bergmans kök</h1>
                 <button className='start__btn' onClick={ newRecipe }>{ btnText }</button>

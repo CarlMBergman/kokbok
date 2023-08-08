@@ -1,8 +1,7 @@
 import './AllRecipes.css'
 import { useSelector } from 'react-redux'
 import RecipeForList from '../components/RecipeForList'
-import NavBtn from '../components/NavBtn'
-import Liked from '../components/likedRecipes/Liked'
+import Nav from '../components/Nav'
 
 function AllRecipes() {
 
@@ -19,10 +18,11 @@ function AllRecipes() {
 
     return (
         <section>
-            <nav className="nav">
+            {/* <nav className="nav">
                 <NavBtn/>
                 <Liked/>
-            </nav>
+            </nav> */}
+            <Nav />
             { recipeComp }
         </section>
     )

@@ -1,0 +1,36 @@
+.slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffbf64;
+}
+
+.slider__btn {
+    margin: 1rem;
+    width: 150px;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid white;
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.slider__btn:nth-last-child(1) {
+    border: none;
+}
+
+.slider__close {
+    position: absolute;
+    top: 50px;
+    left: 95px;
+}

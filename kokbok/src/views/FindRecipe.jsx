@@ -1,17 +1,15 @@
 import './FindRecipe.css'
-import NavBtn from '../components/NavBtn'
-import Liked from '../components/likedRecipes/Liked'
 import FilterFunction from '../components/FilterFunction'
+import Nav from '../components/Nav'
 
 function FindRecipe() {
 
 
     return (
         <section>
-            <nav className="nav">
-                <NavBtn/>
-                <Liked/>
-            </nav>
+            <Nav />
+            <h1>Hitta Recept</h1>
+            <h3>Klicka in alla ingredienser du har hemma och se vad du kan laga med det!</h3>
             <FilterFunction/>
         </section>
     )

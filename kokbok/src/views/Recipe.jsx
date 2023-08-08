@@ -4,9 +4,8 @@ import { useState } from "react";
 
 import Instruction from "../components/instruction";
 import Ingredient  from "../components/Ingredient";
-import Liked       from '../components/likedRecipes/Liked';
-import NavBtn      from '../components/NavBtn';
 import Portions     from '../components/Portions';
+import Nav from '../components/Nav';
 
 function Recipe() {
     const navigate = useNavigate();
@@ -34,10 +33,7 @@ function Recipe() {
 
     return (
         <article className="recipe">
-            <nav className="nav">
-                <NavBtn/>
-                <Liked/>
-            </nav>
+            <Nav />
             <h1 className='recipe__heading--text'>{ navigationState.state.recipe.name }</h1>
             <img className='recipe__img' src={ navigationState.state.recipe.imgPath } alt="" />
             <Portions port={ port } setPort={ setPort } />
